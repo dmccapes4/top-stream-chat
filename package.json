@@ -1,7 +1,7 @@
 {
     "scripts": {
         "build": "webpack -w",
-        "start": "babel-node buildScripts/server.js"
+        "start": "babel-node server.js"
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
