@@ -5,14 +5,13 @@ import webpack from 'webpack'
 import config from '../webpack.config.dev'
 
 const compiler = webpack(config)
+const port = 3000;
+const app = express();
 
 app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath
 }))
-
-const port = 3000;
-const app = express();
 
 app.listen(port, function (error) {
     if(error) {
