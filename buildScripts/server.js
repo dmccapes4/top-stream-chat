@@ -1,4 +1,5 @@
 import express from 'express'
+import favicon from 'express-favicon'
 import path from 'path'
 import open from 'open'
 import webpack from 'webpack'
@@ -7,6 +8,8 @@ import config from '../webpack.config.dev'
 const compiler = webpack(config)
 const port = 3000;
 const app = express();
+
+app.use(favicon(__dirname +' /public/favicon.png'))
 
 app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
