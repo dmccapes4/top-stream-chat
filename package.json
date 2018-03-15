@@ -1,5 +1,6 @@
 {
     "scripts": {
+        "build": "webpack -w",
         "start": "babel-node buildScripts/server.js"
     },
     "devDependencies": {

@@ -9,11 +9,7 @@ const compiler = webpack(config)
 const port = 3000;
 const app = express();
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-
-app.get('/favicon.ico', function(req, res) {
-    res.status(204);
-});
+app.use(express.static(__dirname + '/public'))
 
 app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
