@@ -4,8 +4,13 @@ import ReactDOM from 'react-dom'
 class App extends React.Component {
     render() {
         return (
-            <div>
-                <h1>Howdy from React!</h1>
+            <div id="main">
+                <div id="stream">
+                    <h3>Top Youtube Gaming Stream Chat</h3>
+                    <ul>
+                        <li>Chat goes here</li>
+                    </ul>
+                </div>
             </div>
         )
     }
