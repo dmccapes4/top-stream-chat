@@ -11,6 +11,10 @@ const app = express();
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
+app.get('/favicon.ico', function(req, res) {
+    res.status(204);
+});
+
 app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath
